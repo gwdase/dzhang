@@ -108,6 +108,7 @@ if (! Route::cache())
   Route::cache(TRUE);
 }
 
+i18n::$lang = Request::instance()->param('lang');
 
 /**
  * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
@@ -133,7 +134,7 @@ catch (Exception $e)
 		$view = View::factory('errors/500');
 		Kohana::$log->add('500', $e);
 	}		
-		
+
 	$request->response = View::factory('layout')
 		->set('meta_title', $meta_title)
 		->set('meta_keywords', '')

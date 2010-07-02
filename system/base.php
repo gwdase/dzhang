@@ -30,6 +30,7 @@ if ( ! defined('KOHANA_START_MEMORY'))
  */
 function __($string, array $values = NULL, $lang = 'zh-cn')
 {
+
 	if ($lang !== I18n::$lang)
 	{
 		// The message and target languages are different

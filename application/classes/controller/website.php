@@ -8,8 +8,6 @@ class Controller_Website extends Controller_Template
 	{
 		parent::before();
 
-		i18n::$lang = Request::instance()->param( 'lang' );
-
 		if ($this->auto_render)
 		{
 			$this->template->meta_title = '';
@@ -27,8 +25,8 @@ class Controller_Website extends Controller_Template
 		if ($this->auto_render)
 		{
 			$styles = array(
-				'media/css/screen.css' => 'screen, projection',
-				'media/css/print.css' => 'print',
+				//'media/css/screen.css' => 'screen, projection',
+				//'media/css/print.css' => 'print',
 				'media/css/style.css' => 'screen',
 			);
   
