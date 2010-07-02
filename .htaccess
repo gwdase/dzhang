@@ -1,0 +1,13 @@
+AddHandler application/x-httpd-php .css .html .js
+php_value auto_prepend_file "E:\xampp\htdocs\phpcode\taoe\gzip.php"
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+#	Under Mac Os,You should add this!
+# 
+#	Options +FollowSymLinks
+#	RewriteBase /~baoling/simplephp
+
+	RewriteCond $1 !^(index\.php|cigar_wish_list.json|media|user_guide|robots\.txt|bdunion\.txt)
+	RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
