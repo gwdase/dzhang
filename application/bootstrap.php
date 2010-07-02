@@ -8,7 +8,7 @@
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('Asia/Shanghai');
 
 /**
  * Set the default locale.
@@ -82,17 +82,64 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('default', '(<controller>(/<action>(/<id>)))')
+/*Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller' => 'welcome',
 		'action'     => 'index',
-	));
+	));*/
+if (! Route::cache())
+{
+	/*Route::set('examples', '(<lang>/)examples(/<controller>(/<action>(/<id>)))')
+		->defaults(array(
+		  'lang' => 'zh-cn', 
+			'directory' => 'examples',
+		));*/
+  Route::set('default', '(<lang>/)(<controller>(/<action>(/<id>)))', array('lang' => '(en-us|zh-cn)','id' => '.+'))
+	  ->defaults(array(
+        'lang' => 'zh-cn', 
+		    'controller' => 'default',
+		    'action'     => 'index',
+	  ));
+  Route::cache(TRUE);
+}
+
 
 /**
  * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
  * If no source is specified, the URI will be automatically detected.
  */
-echo Request::instance()
+$request = Request::instance();
+
+try
+{
+	$request->execute()
+		->send_headers();
+}
+catch (Exception $e)
+{
+	if ($request->status == 404 OR $e instanceof Kohana_Request_Exception)
+	{
+		$meta_title = 'Dzhang - Page Not Found';
+		$view = View::factory('errors/404');
+	}		
+	else
+	{
+		$meta_title = 'Dzhang - Page Error';
+		$view = View::factory('errors/500');
+		Kohana::$log->add('500', $e);
+	}		
+		
+	$request->response = View::factory('layout1')
+		->set('meta_title', $meta_title)
+		->set('meta_keywords', '')
+		->set('meta_description', '')
+		->set('styles', array('media/css/style.css' => 'screen', 'media/css/errors.css' => 'screen'))
+		->set('scripts', array())
+		->set('content', $view);
+}
+
+echo $request->response;
+/*echo Request::instance()
 	->execute()
 	->send_headers()
-	->response;
+	->response;*/
