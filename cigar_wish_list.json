@@ -1,0 +1,17 @@
+{
+    "identifier": "wishId",
+    "label":"description",
+    "items":
+    [
+	    {
+		 "wishId":4455, "description":"Don Pepin Garcia Delicias",
+		 "size":"7-50", "origin":"Nicaragua", "wrapper":"Corojo",
+		 "shape":"Straight"
+	    },
+	    {
+		 "wishId":4456, "description":"601 Pepin Garcia Delicias",
+		 "size":"5-50", "origin":"Nicaragua", "wrapper":"Natural",
+		 "shape":"Straight"
+	    }
+    ]
+}
