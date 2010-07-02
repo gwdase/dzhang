@@ -5,7 +5,7 @@ php_value auto_prepend_file "E:\xampp\htdocs\phpcode\taoe\gzip.php"
 RewriteEngine On
 
 # Installation directory
-RewriteBase /dzhang/
+RewriteBase /phpcode/dzhang/
 
 # Protect hidden files from being viewed
 <Files .*>

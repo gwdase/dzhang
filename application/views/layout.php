@@ -1,47 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="" />
-		<meta name="description" content="" />
-		<meta name="author" content="dzhang" />
-		<title>hello</title>
-		<style type="text/css">
-			@import url('media/css/global.css');
-			@import url('media/js/smoothness/jquery-ui.css');
-		</style>
-		<script type="text/javascript" src='media/js/jquery-core-min.js'></script>
-		<script type="text/javascript" src='media/js/jquery-ui-min.js'></script>
-		<script>
-		$(function(){
-			$('#tabs').tabs();
-			});
-		</script>
-	</head>
-
-	<body  class="nihilo">
-		<div id="wrapper">
-			<div id="header">
-				<div id="logo">
-					<div class="cWhiteTitle">taoE管理平台v1.0</div>
-				</div>
-				<div id="headbar-left">
-					<ul>
-						<li><a href="" id="headbar-visited">商品</a></li>
-						<li><a href="" >物流</a></li>
-						<li><a href="" >用户</a></li>
-						<li><a href="">报表</a></li>
-						<li><a href="" >财务</a></li>
-						<li><a href="">系统</a></li>
-					</ul>
-				</div>
-				<div id="headbar-right"><span><a href="$base/main/logout.o" class="cWhite">注销[admin]</a></span> <span class="cWhite">|</span>
-					<span><a href="$base/user/changePasswd.o" class="cWhite">修改密码</a></span><span class="cWhite"> | </span>
-					<span><a href="#" class="cWhite">帮助</a></span></div>
-			</div>
-			<div id="ajaxloading"></div>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	  <title><?php echo $meta_title ?></title>
+	  <meta name="keywords" content="<?php echo $meta_keywords ?>" />
+	  <meta name="description" content="<?php echo $meta_description ?>" />
+      <?php foreach ($styles as $file => $type) echo HTML::style($file, array('media' => $type)), "\n" ?>
+      <?php foreach ($scripts as $file) echo HTML::script($file), "\n" ?>
+  </head>
+  <body>
+      <div id="wrapper">
+	      <div id="header">
+		      <div id="logo">
+			      <div class="cWhiteTitle"><?php echo __('taoE管理平台v1.0') ?></div>
+			  </div>
+			  <div id="headbar-left">
+			      <ul>
+				      <li><a href="" id="headbar-visited"><?php echo __('商品') ?></a></li>
+					  <li><a href="" ><?php echo __('物流') ?></a></li>
+					  <li><a href="" ><?php echo __('用户') ?></a></li>
+					  <li><a href=""><?php echo __('报表') ?></a></li>
+					  <li><a href="" ><?php echo __('财务') ?></a></li>
+					  <li><a href=""><?php echo __('系统') ?></a></li>
+				   </ul>
+			  </div>
+			  <div id="headbar-right">
+			      <span><a href="$base/main/logout.o" class="cWhite">注销[admin]</a></span><span class="cWhite">|</span><span><a href="$base/user/changePasswd.o" class="cWhite">修改密码</a></span><span class="cWhite"> | </span><span><a href="#" class="cWhite">帮助</a></span>
+			  </div>
+		   </div>
+		   <div id="ajaxloading"></div>
 			<!-- leftbar -->
-			<!--<div id="leftbar">
+		   <!--<div id="leftbar">
 				<div class="root_menu">
 					<ul>
 						<li class="menu-link"><a href="$base/command/">扣费通道管理</a></li>
@@ -66,7 +55,7 @@
 
 				</div>
 			</div>-->
-		<div class="main">
+<div class="main">
 	<div class="member_left">
 	<h3>进货管理</h3>
     <ul>
@@ -97,23 +86,11 @@
         <li id="AccountHistory"><a href="{[siteurl uri='account/history']}">历史记录</a></li>
         <li id="AccountDelta"><a href="{[siteurl uri='account/delta']}">在线充值</a></li>
     </ul>
+    </div>
+	<div class="member_right">
+        <?php echo $content ?>
+    </div>
 </div>
-	    <div class="member_right">
-		   		<!-- Tabs -->
-		<h2 class="demoHeaders">Tabs</h2>
-		<div id="tabs">
-			<ul>
-				<li><a href="#tabs-1">First</a></li>
-				<li><a href="#tabs-2">Second</a></li>
-				<li><a href="#tabs-3">Third</a></li>
-			</ul>
-			<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-			<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-			<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
-		</div>
-</div>
-</div>
-
 			<div class="clear"></div>
 			<!--footer-->
 			<div id="footer">
@@ -122,5 +99,6 @@
                 <p><script src="http://s73.cnzz.com/stat.php?id=1262414&web_id=1262414&show=pic1" language="JavaScript" charset="gb2312"></script></p>
 			</div>
 		</div>
-	</body>
+
+  </body>
 </html>

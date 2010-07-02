@@ -129,7 +129,7 @@ catch (Exception $e)
 		Kohana::$log->add('500', $e);
 	}		
 		
-	$request->response = View::factory('layout1')
+	$request->response = View::factory('layout')
 		->set('meta_title', $meta_title)
 		->set('meta_keywords', '')
 		->set('meta_description', '')

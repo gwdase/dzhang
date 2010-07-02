@@ -2,7 +2,7 @@
 
 class Controller_Website extends Controller_Template
 {
-	public $template = 'layout1';
+	public $template = 'layout';
 
 	public function before()
 	{
