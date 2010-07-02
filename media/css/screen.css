@@ -1,0 +1,112 @@
+/*-----------------------------------------------------------------------
+
+   BlueTrip CSS Framework
+   
+   Mike Crittenden
+   mike@capsizedesigns.com
+   Copyright 2008 Mike Crittenden
+   
+   License - MIT or GPL (whichever suits you better)
+
+----------------------------------------------------------------------- */
+
+/* MEYER RESET v1.0*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td	{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body													{line-height:1;}
+blockquote,q											{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after		{content:'';}
+:focus													{outline:0;}
+ins														{text-decoration:none}
+del														{text-decoration:line-through}
+table													{border-collapse:collapse;border-spacing:0}
+
+/* IE FIXES */
+body                                                 {text-align:left;}
+ul li                                                {text-indent:0;margin-left:0;}
+sup, sub                                             {font-size:100%;} /* IE superscript & subscript bug */
+blockquote p, blockquote ul, blockquote ol, blockquote dl, blockquote pre, blockquote address, 
+blockquote table, blockquote form, blockquote h1, blockquote h2, blockquote h3, blockquote h4, blockquote h5, blockquote h6 {margin-top:0;margin-bottom:0;} /* IE can't handle :first-child */
+* html textarea, * html input                        {padding:0;} /* IE < 7 form fix */
+input[type='submit'], input[type='button']           {padding:0;} /* IE 7 button fix */
+legend+*                                             {margin-top:0;} /* we already added legend margin */
+a abbr, a acronym                                    {text-decoration:underline;} /* IE 7 bug */
+fieldset legend                                      {margin:0;} /* IE 6 disappearing legend bug */
+
+/* HTML & BODY */
+html, body { height: 100%; width: 100%; }
+body       { font-family: "Lucida Grande", Tahoma, sans-serif; }
+
+/* FORMS & INPUTS */
+textarea,
+select,
+input                        { font-size: 16px; border: 1px solid #ccc; }
+
+select,
+input[type="text"],
+input[type="password"]       { height: 24px;min-width: 200px; } 
+
+input[type="radio"],
+input[type="checkbox"]       { margin: 0; padding: 0; min-width: 20px; width: 20px; border: none; }
+
+input[type="submit"]         { background: url('../img/buttons/submit.png') no-repeat; border: none; cursor: pointer; font-size: 0px; margin: 0; padding: 0; height: 33px; width: 121px; }
+input[type="submit"]:hover   { background: url('../img/buttons/submit.png') 0px -33px no-repeat; border: none; cursor: pointer; font-size: 0px; margin: 0; padding: 0; height: 33px; width: 121px; }
+
+
+input:focus                  { border: 1px solid #8e8e8e; }
+input[type="radio"],
+input[type="checkbox"]       { border: none; }
+
+input[type="text"].error,
+input[type="password"].error { border: 1px solid #ff0000; }
+
+div.label { font-size: 14px; padding-bottom: 5px; padding-top: 10px; }
+
+/* HEADERS */
+h1 { color: #004A80; font-size: 28px; }
+
+/* LINKS */
+a:link,
+a:active,
+a:visited { color: #1F1F1F; text-decoration:none; }
+a:hover   { color: #0645AA; text-decoration:underline; }
+
+/* DISPLAY */
+.hide { display: none; }
+.show { display: block; }
+
+.block-center { margin: 0 auto; }
+
+/* WIDTHS AND HEIGHT */
+.h-20 { height: 20px; }
+
+.w-100p { width: 100%; }
+.w-600 { width: 600px; }
+
+/* PADDINGS AND MARGINS */
+.m-t-10 {margin-top: 10px;}
+
+.p-t-10 {padding-top: 10px;}
+.p-t-25 {padding-top: 25px;}
+
+/* MISC */
+div.clear { content: ""; display: block; height: 0; clear: both; visibility: hidden; width: 100%; }
+
+/* ------------------------ Wrapper------------------------ */
+#wrapper      { width:980px; margin:0 auto; background: #ffffff; }
+#wrapper-main { width:100%; background:#ffffff url('../img/line.gif') repeat-y 648px top; margin:10px auto; border-left:1px solid #ccc; border-right:1px solid #ccc; }
+/* ------------------------ Header------------------------ */
+#header                               { color: #FFF; background: #3A3A3A; border:1px solid #3A3A3A; float:left; width:100%; }
+#header .site-name                    { float: left; margin: 25px 0 0 80px; padding: 0; display:inline; }
+#header #primary-links ul             { float: right; list-style: none; text-align: center; vertical-align: text-bottom; margin: 60px 20px 20px 0; padding: 0; display:inline; }
+#header #primary-links ul li          { float: left; height: 36px; background: none; line-height: 36px; font-size: 14px; list-style: none; margin: 0 2px; padding: 0; }
+#header #primary-links ul li a        { display: block; color: #FFF; border-left: 4px solid #858383; font-family: Arial, Helvetica, sans-serif; font-weight: normal; text-decoration: none; margin: 0; padding: 0 20px 0 5px; }
+#header #primary-links ul li a:hover,
+#header #primary-links ul li a:active, 
+#header #primary-links ul li a.active { color: #FFF; border-left: 4px solid #FACD00; }
+#header .loading                      { text-align: right; width: 16px; }
+#header .loading #loading             { background: url('../img/ajax-loader.gif') 0px 8px no-repeat; display: none; height: 24px; width: 16px; }
+/* ------------------------ Footer ------------------------ */
+#footer         { width: 100%; color: #F9F9F9; font-size: 13px; text-align: center; line-height: 2.5em; background: #3A3A3A; height:100px; border:1px solid #3A3A3A; }
+#footer a       { color: #F9F9F9; }
+#footer a:hover { color: #F9F9F9; text-decoration: underline; }
+/* ------------------------ Main ------------------------ */
