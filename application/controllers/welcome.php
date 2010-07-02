@@ -13,7 +13,7 @@ class Welcome extends Controller {
 	$result = $this->Model_welcome->get_last_ten_entries();
 //var_dump($result);
 		$this->load->helper('url');
-		$this->load->view('obe');
+		$this->load->view('layout');
 	}
 }
 
