@@ -117,7 +117,9 @@
 			<div class="clear"></div>
 			<!--footer-->
 			<div id="footer">
-				<p><a href="#">服务条款</a> <a href="#">联系我们</a> Copyright  2009-2010 by taoE</p>
+				<p><a href="#">服务条款</a> <a href="#">联系我们</a> Copyright &copy; 2010 by Dzhang.Org All Rights Reserved.</p>
+                <p><a target="_blank" href="http://www.miibeian.gov.cn/">蒙ICP备07003428号</a></p>
+                <p><script src="http://s73.cnzz.com/stat.php?id=1262414&web_id=1262414&show=pic1" language="JavaScript" charset="gb2312"></script></p>
 			</div>
 		</div>
 	</body>
