@@ -97,8 +97,13 @@ if (! Route::cache())
   Route::set('default', '(<lang>/)(<controller>(/<action>(/<id>)))', array('lang' => '(en-us|zh-cn)','id' => '.+'))
 	  ->defaults(array(
         'lang' => 'zh-cn', 
-		    'controller' => 'default',
-		    'action'     => 'index',
+		'controller' => 'default',
+		'action'     => 'index',
+	  ));
+  Route::set('catch_all', '<path>', array('path' => '.+'))
+	  ->defaults(array(
+		'controller' => 'errors',
+		'action'     => '404',
 	  ));
   Route::cache(TRUE);
 }
