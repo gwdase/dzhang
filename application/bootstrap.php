@@ -71,9 +71,9 @@ Kohana::modules(array(
 	// 'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
+	 'database'   => MODPATH.'database',   // Database access
 	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
+	 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'pagination' => MODPATH.'pagination', // Paging of results
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
 	));
@@ -114,7 +114,7 @@ i18n::$lang = Request::instance()->param('lang');
  * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
  * If no source is specified, the URI will be automatically detected.
  */
-$request = Request::instance();
+/*$request = Request::instance();
 
 try
 {
@@ -144,8 +144,8 @@ catch (Exception $e)
 		->set('content', $view);
 }
 
-echo $request->response;
-/*echo Request::instance()
+echo $request->response;*/
+echo Request::instance()
 	->execute()
 	->send_headers()
-	->response;*/
+	->response;

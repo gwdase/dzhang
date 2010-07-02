@@ -341,3 +341,73 @@
 2010-07-02 16:49:37 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes\kohana\request.php [ 1007 ]
 2010-07-02 16:50:16 --- ERROR: ReflectionException [ -1 ]: Class controller_media does not exist ~ SYSPATH/classes\kohana\request.php [ 1007 ]
 2010-07-02 16:52:40 --- ERROR: ErrorException [ 8 ]: Undefined variable: scripts ~ APPPATH/views\layout.php [ 9 ]
+2010-07-02 17:39:47 --- ERROR: ErrorException [ 1 ]: Class 'DB' not found ~ APPPATH/classes\controller\default.php [ 7 ]
+2010-07-02 17:40:34 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_OBJECT_OPERATOR ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:40:43 --- ERROR: ErrorException [ 1 ]: Call to undefined method Database_Query_Builder_Select::as_array() ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:40:43 --- ERROR: ErrorException [ 1 ]: Call to undefined method Database_Query_Builder_Select::as_array() ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:40:54 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_OBJECT_OPERATOR ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:40:55 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_OBJECT_OPERATOR ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:41:33 --- ERROR: ErrorException [ 1 ]: Call to undefined method Database_Query_Builder_Select::as_array() ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:41:33 --- ERROR: ErrorException [ 1 ]: Call to undefined method Database_Query_Builder_Select::as_array() ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:41:34 --- ERROR: ErrorException [ 1 ]: Call to undefined method Database_Query_Builder_Select::as_array() ~ APPPATH/classes\controller\default.php [ 13 ]
+2010-07-02 17:42:06 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_STRING ~ APPPATH/classes\controller\default.php [ 14 ]
+2010-07-02 17:42:07 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_STRING ~ APPPATH/classes\controller\default.php [ 14 ]
+2010-07-02 17:43:27 --- 500: exception 'ErrorException' with message 'Undefined property: Database_MySQL_Result::$title' in E:\xampp\htdocs\phpcode\dzhang\application\classes\controller\default.php:14
+Stack trace:
+#0 E:\xampp\htdocs\phpcode\dzhang\application\classes\controller\default.php(14): Kohana_Core::error_handler(8, 'Undefined prope...', 'E:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_Default->action_index('zh-cn')
+#2 E:\xampp\htdocs\phpcode\dzhang\system\classes\kohana\request.php(1025): ReflectionMethod->invokeArgs(Object(Controller_Default), Array)
+#3 E:\xampp\htdocs\phpcode\dzhang\application\bootstrap.php(121): Kohana_Request->execute()
+#4 E:\xampp\htdocs\phpcode\dzhang\index.php(103): require('E:\xampp\htdocs...')
+#5 {main}
+2010-07-02 17:43:40 --- 500: exception 'ErrorException' with message 'Undefined property: Database_MySQL_Result::$title' in E:\xampp\htdocs\phpcode\dzhang\application\classes\controller\default.php:14
+Stack trace:
+#0 E:\xampp\htdocs\phpcode\dzhang\application\classes\controller\default.php(14): Kohana_Core::error_handler(8, 'Undefined prope...', 'E:\xampp\htdocs...', 14, Array)
+#1 [internal function]: Controller_Default->action_index('zh-cn')
+#2 E:\xampp\htdocs\phpcode\dzhang\system\classes\kohana\request.php(1025): ReflectionMethod->invokeArgs(Object(Controller_Default), Array)
+#3 E:\xampp\htdocs\phpcode\dzhang\application\bootstrap.php(121): Kohana_Request->execute()
+#4 E:\xampp\htdocs\phpcode\dzhang\index.php(103): require('E:\xampp\htdocs...')
+#5 {main}
+2010-07-02 17:48:39 --- ERROR: ErrorException [ 1 ]: Class 'ORM' not found ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:48:49 --- 500: exception 'ErrorException' with message 'Non-static method Model_Test::save() should not be called statically, assuming $this from incompatible context' in E:\xampp\htdocs\phpcode\dzhang\application\classes\controller\default.php:15
+Stack trace:
+#0 E:\xampp\htdocs\phpcode\dzhang\application\classes\controller\default.php(15): Kohana_Core::error_handler(2048, 'Non-static meth...', 'E:\xampp\htdocs...', 15, Array)
+#1 [internal function]: Controller_Default->action_index('zh-cn')
+#2 E:\xampp\htdocs\phpcode\dzhang\system\classes\kohana\request.php(1025): ReflectionMethod->invokeArgs(Object(Controller_Default), Array)
+#3 E:\xampp\htdocs\phpcode\dzhang\application\bootstrap.php(121): Kohana_Request->execute()
+#4 E:\xampp\htdocs\phpcode\dzhang\index.php(103): require('E:\xampp\htdocs...')
+#5 {main}
+2010-07-02 17:50:13 --- ERROR: ErrorException [ 2048 ]: Non-static method Model_Test::save() should not be called statically, assuming $this from incompatible context ~ APPPATH/classes\controller\default.php [ 15 ]
+2010-07-02 17:50:43 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:50:44 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:51:04 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_CLASS, expecting T_PAAMAYIM_NEKUDOTAYIM ~ APPPATH/classes\model\test.php [ 3 ]
+2010-07-02 17:51:04 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_CLASS, expecting T_PAAMAYIM_NEKUDOTAYIM ~ APPPATH/classes\model\test.php [ 3 ]
+2010-07-02 17:51:37 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:51:37 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:52:31 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_OBJECT_OPERATOR ~ APPPATH/classes\controller\default.php [ 15 ]
+2010-07-02 17:52:32 --- ERROR: ErrorException [ 4 ]: syntax error, unexpected T_OBJECT_OPERATOR ~ APPPATH/classes\controller\default.php [ 15 ]
+2010-07-02 17:52:43 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:52:44 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:52:44 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:52:44 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:52:44 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:52:44 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:54:03 --- ERROR: ErrorException [ 1 ]: Class 'Model_post' not found ~ APPPATH/classes\controller\default.php [ 8 ]
+2010-07-02 17:54:09 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:54:11 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:55:15 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:55:15 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:55:16 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:55:16 --- ERROR: ErrorException [ 64 ]: Cannot make non static method Kohana_ORM::save() static in class Model_Test ~ APPPATH/classes\model\test.php [ 4 ]
+2010-07-02 17:55:27 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:02 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:09 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:11 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:41 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:42 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:56 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:57:57 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:58:03 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:58:04 --- ERROR: Database_Exception [ 1146 ]: Table &#039;taoe.taoe_tests&#039; doesn&#039;t exist [ SHOW FULL COLUMNS FROM `taoe_tests` ] ~ MODPATH/database\classes\kohana\database\mysql.php [ 178 ]
+2010-07-02 17:58:23 --- ERROR: ErrorException [ 8 ]: Undefined variable: result ~ APPPATH/classes\controller\default.php [ 22 ]
+2010-07-02 17:58:24 --- ERROR: ErrorException [ 8 ]: Undefined variable: result ~ APPPATH/classes\controller\default.php [ 22 ]
