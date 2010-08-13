@@ -20,11 +20,23 @@ class Controller_Default extends Controller_Website {
 		//var_dump($result);*/
 		//$result =	$this->test_model->save();
 		//var_dump($result);
-
 		$this->template->meta_title = __('taoE管理平台v1.0');
 		$this->template->meta_keywords = __('taoE管理平台v1.0');
 		$this->template->meta_description = __('taoE管理平台v1.0');
 		$this->template->content = View::factory(i18n::$lang.'/content');
 	}
 
+	public function action_grid()
+	{
+		$responce->rows[0] = array(
+	        'id' => 1,
+	        'cell' => array(1,'title1','title2','title3','title4','title5','title6')
+	    );
+		$responce->rows[1] = array(
+	        'id' => 2,
+	        'cell' => array(2,'title11','title22','title33','title44','title55','title66')
+	    );
+        echo json_encode($responce);
+		exit;
+	}
 }
