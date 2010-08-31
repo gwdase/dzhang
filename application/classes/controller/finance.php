@@ -1,12 +1,11 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Default extends Controller_Website {
+class Controller_Finance extends Controller_Website {
 
     public function before()
     {
-		parent::before();
-		//$this->test_model = new Model_test;
-	}
+	parent::before();
+     }
 
 	public function action_index()
 	{
@@ -23,8 +22,8 @@ class Controller_Default extends Controller_Website {
 		$this->template->meta_title = __('taoE管理平台v1.0');
 		$this->template->meta_keywords = __('taoE管理平台v1.0');
 		$this->template->meta_description = __('taoE管理平台v1.0');
-		$this->template->sidebar = View::factory(i18n::$lang.'/business/sidebar');
-		$this->template->content = View::factory(i18n::$lang.'/business/content');
+		$this->template->sidebar = View::factory(i18n::$lang.'/finance/sidebar');
+		$this->template->content = View::factory(i18n::$lang.'/finance/content');
 	}
 
 	public function action_grid()
