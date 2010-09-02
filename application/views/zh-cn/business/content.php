@@ -4,15 +4,17 @@
 jQuery("#list2").jqGrid({
    	url:'default/grid',
 	datatype: "json",
-   	colNames:['ID','商品编号', '商品名称', '规格','库存数量','成本均价','库存总价'],
+   	colNames:['ID','商品编号', '商品名称', '单位', '数量', '单价', '金额', '状态', '备注'],
    	colModel:[
-   		{name:'id',index:'id', width:75},
-   		{name:'invdate',index:'invdate', width:90},
-   		{name:'name',index:'name asc, invdate', width:100},
-   		{name:'amount',index:'amount', width:80, align:"right"},
-   		{name:'tax',index:'tax', width:80, align:"right"},		
-   		{name:'total',index:'total', width:80,align:"right"},		
-   		{name:'note',index:'note', width:250, sortable:false}		
+   		{name:'id',index:'id', width:50},
+   		{name:'invdate',index:'invdate', width:90,editable:true},
+   		{name:'name',index:'name asc, invdate', width:150},
+   		{name:'amount1',index:'amount1', width:30, align:"center"},
+   		{name:'amount',index:'amount', width:80, align:"right",editable:true,editrules:{number:true}},
+   		{name:'tax',index:'tax', width:80,align:"right",editable:true,editrules:{number:true}},
+		{name:'total',index:'total', width:80,align:"right"},
+		{name:'total2',index:'total', width:50,align:"right"},
+   		{name:'note',index:'note', width:170, sortable:false}
    	],
    	rowNum:10,
    	rowList:[10,20,30],
@@ -20,7 +22,26 @@ jQuery("#list2").jqGrid({
    	sortname: 'id',
     viewrecords: true,
     sortorder: "desc",
-    caption:"库存测试"
+    caption:"进货单",
+    	forceFit : true,
+    cellEdit: true,
+    cellsubmit: 'clientArray',
+    afterEditCell: function (id,name,val,iRow,iCol){
+		if(name=='invdate') {
+			jQuery("#"+iRow+"_invdate","#list2").datepicker({dateFormat:"yy-mm-dd"});
+		}
+	},
+	afterSaveCell : function(rowid,name,val,iRow,iCol) {
+		if(name == 'amount') {
+			var taxval = jQuery("#list2").jqGrid('getCell',rowid,iCol+1);
+			jQuery("#list2").jqGrid('setRowData',rowid,{total:parseFloat(val)*parseFloat(taxval)});
+		}
+		if(name == 'tax') {
+			var amtval = jQuery("#list2").jqGrid('getCell',rowid,iCol-1);
+			jQuery("#list2").jqGrid('setRowData',rowid,{total:parseFloat(val)*parseFloat(amtval)});
+		}
+	}
+
 });
 jQuery("#list2").jqGrid('navGrid','#pager2',{edit:true,add:true,del:true});
 </script>

@@ -1,4 +1,11 @@
-    <h3>进货管理</h3>
+<script language="javascript" type="text/javascript">
+//<![CDATA[
+$(function(){
+    $('#business_bar').menuActive();
+});
+//]]>
+</script>
+<h3>进货管理</h3>
     <ul>
         <li id="Purchase" class="active">进货单</li>
         <li id="PurchaseList"><a href="{[siteurl uri='purchase/list']}">退货单</a></li>

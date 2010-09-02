@@ -18,8 +18,8 @@
 	  </div>
 	  <div id="headbar-left">
 	    <ul>
-	      <li><a href="" id="headbar-visited"><?php echo __('业务') ?></a></li>
-	      <li><a href="finance" ><?php echo __('财务') ?></a></li>
+	      <li id="business_bar"><a href="default"><?php echo __('业务') ?></a></li>
+	      <li id="finance_bar"><a href="finance"><?php echo __('财务') ?></a></li>
 	      <li><a href="" ><?php echo __('查账') ?></a></li>
 	      <li><a href=""><?php echo __('基本信息') ?></a></li>
 	      <li><a href="" ><?php echo __('网店管理') ?></a></li>

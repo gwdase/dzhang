@@ -31,11 +31,11 @@ class Controller_Default extends Controller_Website {
 	{
 		$responce->rows[0] = array(
 	        'id' => 1,
-	        'cell' => array(1,'title1','title2','title3','title4','title5','title6')
+	        'cell' => array(1,'2010-1-1','发卡','个','2','20.00','40.00','是','')
 	    );
 		$responce->rows[1] = array(
 	        'id' => 2,
-	        'cell' => array(2,'title11','title22','title33','title44','title55','title66')
+	        'cell' => array(2,'2010-2-22','戒指','个','4','4.00','16.00','否','')
 	    );
         echo json_encode($responce);
 		exit;

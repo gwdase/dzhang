@@ -29,11 +29,12 @@ class Controller_Website extends Controller_Template
 				//'media/css/print.css' => 'print',
 				'media/css/style.css' => 'screen',
 				'media/js/smoothness/jquery-ui.css' => 'screen',
-                'media/js/jqgrid/css/ui.jqgrid.css' => 'screen',
+                                'media/js/jqgrid/css/ui.jqgrid.css' => 'screen',
 			);
   
 			$scripts = array(
 				'media/js/jquery-core-min.js',
+			    	'media/js/jquery-custom-nc.js',
 				'media/js/jquery-ui-min.js',
 				'media/js/jqgrid/js/i18n/grid.locale-cn.js',
 				'media/js/jqgrid/js/jquery.jqGrid.min.js',
